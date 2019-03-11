@@ -66,13 +66,13 @@ def buildFeatureStatement(tree):
     # the names and will build any FOPC associated with prepositional objects it finds and assert it.
 
 ##### Your code to resolveObjectFOPC here -- this takes the root, the primary (suibject) and your names
-    Primary = languageTools.extractExistentialTarget(Root)
-    if Primary==None:
-        Primary = languageTools.extractTargetFeature(Root)
-        if Primary == None:
-            Primary = languageTools.extractSubject(Root)
+    #Primary = languageTools.extractExistentialTarget(Root)
+    #if Primary==None:
+    #    Primary = languageTools.extractTargetFeature(Root)
+    #    if Primary == None:
+    #        Primary = languageTools.extractSubject(Root)
 
-    Phrases = core.findAndAttachPrepObjectsFOPC(Root, Primary, Object_Subject)
+    Phrases = core.findAndAttachPrepObjectsFOPC(Root, Subject, Object_Subject)
 
     # Next we pull out any features associated with the object and attach them to the object. We can use
     # core.findAndAssertFeaturesFOPC to do this.  Like core.findAndAttachPrepObjectsFOPC, it takes the ROOT and
